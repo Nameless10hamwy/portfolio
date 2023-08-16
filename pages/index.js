@@ -34,7 +34,7 @@ const Home = () => {
         animate="show" 
         exit="hidden"
          className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'>
-          I'm a software engineer based in Damascus Syria, who specializes in building exceptional digital experiences.
+          I am a software engineer based in Damascus Syria, who specializes in building exceptional digital experiences.
         </motion.p>
         <div className='flex justify-center xl:hidden relative'>
           <ProjectsBtn />

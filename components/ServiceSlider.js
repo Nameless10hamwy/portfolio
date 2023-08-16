@@ -1,3 +1,12 @@
+import React from 'react';
+import RxCrop from './RxCrop'; // Assuming RxCrop is a component defined in a separate file
+import RxPencil2 from './RxPencil2'; // Assuming RxPencil2 is a component defined in a separate file
+import RxDesktop from './RxDesktop'; // Assuming RxDesktop is a component defined in a separate file
+import RxReader from './RxReader'; // Assuming RxReader is a component defined in a separate file
+import RxRocket from './RxRocket'; // Assuming RxRocket is a component defined in a separate file
+
+
+
 // data
 const serviceData = [
   {
