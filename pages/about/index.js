@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import { v4 as uuidv4 } from 'uuid';
-
 
 import {
   FaHtml5,
@@ -30,18 +28,18 @@ const aboutData = [
         
         title: 'Web Development',
         icons: [
-          <FaHtml5 key={uuidv4()}/>,
-          <FaCss3 key={uuidv4()}/>,
-          <FaJs key={uuidv4()}/>,
-          <FaReact key={uuidv4()}/>,
-          <SiNextdotjs key={uuidv4()}/>,
-          <SiFramer key={uuidv4()}/>,
-          <FaWordpress key={uuidv4()}/>,
+          <FaHtml5 />,
+          <FaCss3 />,
+          <FaJs />,
+          <FaReact />,
+          <SiNextdotjs />,
+          <SiFramer />,
+          <FaWordpress />,
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma key={uuidv4()}/>, <SiAdobexd key={uuidv4()}/>, <SiAdobephotoshop key={uuidv4()}/>],
+        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
       },
     ],
   },
@@ -116,7 +114,7 @@ const About = () => {
     initial="hidden" 
     animate="show" 
     exit="hidden" 
-    className='hidden xl:flex absolute bottom-0 -left-[250px]'
+    className='hidden xl:flex absolute bottom-0 -left-[200px]'
     >
       <Avatar />
     </motion.div>
@@ -145,13 +143,11 @@ const About = () => {
       {/* info */}
       <div className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
         <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
-          {aboutData.map((item, uuidv4) => {
-              {/* eslint-disable-next-line react/no-array-index-key */}
-
+          {aboutData.map((item, itemindex) => {
             return (
-              <div  key={uuidv4()}
-              className={` ${index === uuidv4 && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-              onClick={()=>setIndex(uuidv4)}
+              <div key={itemindex}
+              className={` ${index === itemindex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'} cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+              onClick={()=>setIndex(itemindex)}
               >
                 {item.title}
               </div>
@@ -159,20 +155,18 @@ const About = () => {
           })}
         </div>
         <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start'>
-          {aboutData[index].info.map((item, uuidv4) => {
-              {/* eslint-disable-next-line react/no-array-index-key */}
-
+          {aboutData[index].info.map((item, itemindex) => {
             return (
-              <div  key={uuidv4()} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/80'>
+              <div key={itemindex} className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/80'>
                 {/* title */}
                 <div className='font-light mb-2 md:mb-0'>{item.title}</div>
                 <div className='hidden md:flex'>-</div>
                 <div> {item.stage} </div>
                 <div className='flex gap-x-4'>
                 {/* icons */}
-                {item.icons?.map((icon, uuidv4) => {
+                {item.icons?.map((icon, itemindex) => {
                   return (
-                    <div  key={uuidv4()} className='text-2xl text-white'>{ icon }</div>
+                    <div className='text-2xl text-white'>{ icon }</div>
                   );
                 })}
                 </div>
